@@ -5,6 +5,7 @@ let countryToGuess = {
   continent: "",
   capital: "",
   localPeople: "",
+  mapsLink: "",
 };
 const fetchedContinents = {}; // Cache system
 
@@ -104,8 +105,6 @@ async function loadFlagImage(svg, alt) {
 async function generateGuess() {
   const randomIndex = Math.floor(Math.random() * countriesByContinent.length);
   const randomCountry = countriesByContinent[randomIndex];
-
-  console.log(randomCountry);
 
   countryToGuess = {
     name: extractCountryName(randomCountry),
